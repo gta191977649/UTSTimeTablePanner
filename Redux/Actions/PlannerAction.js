@@ -3,10 +3,10 @@ import {FETCH_UTS_TIMETABLE,FETCH_UTS_TIMETABLE_ERROR} from './Constants';
 import axios from "axios";
 const querystring = require('querystring');
 
-export const fetchUTSClass = () => dispatch => {
+export const fetchUTSClass = (subjectCode) => dispatch => {
     let restURI = "https://mytimetable.uts.edu.au/aplus2018/rest/timetable/subjects";
     const requestBody = {
-        'search-term': 31263
+        'search-term': subjectCode
     }
     const config = {
         headers: {
