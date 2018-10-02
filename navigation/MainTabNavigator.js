@@ -7,9 +7,13 @@ import HomeScreen from '../screens/Home/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import PlannerScreen from '../screens/PlannerScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import SearchResultScreen from "../screens/SearchResultScreen";
+import SearchScreen from "../screens/SearchScreen";
 
 const HomeStack = createStackNavigator({
-  Home: HomeScreen,
+    Home: HomeScreen,
+    SearchResult:SearchResultScreen,
+    Search:SearchScreen
 });
 
 HomeStack.navigationOptions = {

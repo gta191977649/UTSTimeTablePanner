@@ -11,7 +11,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 class PlannerScreen extends React.Component {
 
     static navigationOptions = {
-        title: '搜索结果 31263',
+        title: '课程计划',
     };
 
     constructor(props) {
@@ -22,7 +22,7 @@ class PlannerScreen extends React.Component {
     }
 
     componentWillMount() {
-        this.props.fetchUTSClass();
+        this.props.fetchUTSClass(31242);
 
     }
     componentWillReceiveProps(nextProps) {
@@ -30,6 +30,8 @@ class PlannerScreen extends React.Component {
         //console.log(nextProps.subject);
     }
     render() {
+        const { navigate } = this.props.navigation;
+
         let results = [];
         let activites = [];
         /*
@@ -45,46 +47,22 @@ class PlannerScreen extends React.Component {
 
         })
         */
-        Object.values(this.state.data).map((item,idx)=>(
-            /* 解析 Lecture */
-            results.push(
-                <Card key={idx}
-                      title={item.description}>
-                    <Text>学期: <Text style={{fontWeight: 'bold'}}>{item.semester}</Text></Text>
-                    <Text>课号: <Text style={{fontWeight: 'bold'}}>{item.subject_code}</Text></Text>
-                </Card>
-            ), /* 解析Tuturial */
-                Object.values(item.activities).map((item,idx)=>(
-                    activites.push(
-                        <Card key={idx} title={item.activity_group_code + ' #' + item.activity_code}>
-                            <Text>班号: <Text style={{fontWeight: 'bold'}}>{item.activity_code}</Text></Text>
-                            <Text>类型: <Text style={{fontWeight: 'bold'}}>{item.activity_type}</Text></Text>
-                            <Text>开课: <Text style={{fontWeight: 'bold'}}>{item.start_date}</Text></Text>
-                            <Text>星期: <Text style={{fontWeight: 'bold'}}>{item.day_of_week}</Text></Text>
-                            <Text>时间: <Text style={{fontWeight: 'bold'}}>{item.start_time}</Text></Text>
-                            <Text>时长: <Text style={{fontWeight: 'bold'}}>{item.duration/60}</Text> 小时</Text>
-                            <Text>地点: <Text style={{fontWeight: 'bold'}}>{item.location}</Text></Text>
-                            <Button title='选班' onPress={console.log('ok')}/>
-                        </Card>
-                    )
 
-            ))
-        ))
 
         return (
             <View style={styles.container}>
+
                 <ScrollView style={styles.container}>
-                    {results}
-                    {activites}
+
                 </ScrollView>
-                {/*
+                {
                 <ActionButton buttonColor="rgba(231,76,60,1)">
-                    <ActionButton.Item buttonColor='#9b59b6' title="Add Subject" onPress={() => console.log("notes tapped!")}>
+                    <ActionButton.Item buttonColor='#9b59b6' title="新增课程" onPress={() => navigate('Search')}>
                         <Icon name="md-done-all" style={styles.actionButtonIcon} />
                     </ActionButton.Item>
 
                 </ActionButton>
-                */}
+                }
 
             </View>
         );
