@@ -1,64 +1,81 @@
 import React, {Component} from 'react';
-import {ScrollView, StyleSheet, Text, View,Button} from 'react-native';
+import {ScrollView, StyleSheet, Text, View,Button,ActivityIndicator} from 'react-native';
 import Toast, {DURATION} from 'react-native-easy-toast'
 import {Card, SearchBar} from 'react-native-elements'
-import connect from "react-redux/es/connect/connect";
-import {fetchUTSClass} from "../Redux/Actions/PlannerAction";
+import { connect } from 'react-redux';
+import {fetchUTSClass, fetchUTSClassActivities} from "../Redux/Actions/PlannerAction";
 
 class SearchScreen extends Component{
     constructor(props) {
         super(props);
         this.state = {
             keyword: "",
-            subject:[]
+            isLoading: false,
+            subject:[],
         }
         //this.onSearchSubmit = this.onSearchSubmit.bind(this);
         this.onUserEnterKeyWords = this.onUserEnterKeyWords.bind(this);
+        this.onSubjectSelect = this.onSubjectSelect.bind(this);
+        this.onSearchSubmit = this.onSearchSubmit.bind(this);
     }
-    /*
+
+
+
     onSearchSubmit() {
-        const { navigate } = this.props.navigation;
-        navigate("SearchResult",{
-            searchTerm:this.state.keyword
-        });
+        console.log("搜索",this.state.keyword);
+        this.props.fetchUTSClass(this.state.keyword);
+        this.setState({isLoading:true});
     }
-    */
+
     onUserEnterKeyWords(keyword) {
         console.log(keyword.length);
-        if(keyword.length > 0) {
-            this.props.fetchUTSClass(keyword);
-        } else {
-            this.setState({subject:[]});
-        }
+        this.setState({keyword:keyword});
     }
+
     componentWillReceiveProps(nextProps) {
+
         let sujectArray = [];
-        Object.keys(nextProps.subject).forEach( (key,idx) =>{
-            sujectArray.push({
-                description:nextProps.subject[key].description,
-                semester:nextProps.subject[key].semester,
-                subject_code:nextProps.subject[key].subject_code,
-            })
+        Object.keys(nextProps.subject).forEach((key, idx) => {
+            if(key !== null) {
+                sujectArray.push({
+                    description: nextProps.subject[key].description,
+                    semester: nextProps.subject[key].semester,
+                    subject_code: nextProps.subject[key].subject_code,
+                    activites: nextProps.subject[key].activities,
+                })
+            }
         });
 
-        this.setState({subject:sujectArray});
+        this.setState({subject: sujectArray, isLoading: false});
 
+    }
+    onSubjectSelect(selectedIndex) {
+        if(this.state.subject.length > 0 && !this.state.isLoading) {
+            //console.log(this.state.subject[selectedIndex]);
+            const data = this.state.subject[selectedIndex];
+            this.props.navigation.navigate(
+                'ActivitySelect', {data:data}
+            );
+        }
     }
 
     render() {
         let queryResults;
+
         if(this.state.subject.length > 0) {
             queryResults = this.state.subject.map((item,idx)=>(
                 <Card key={idx}
                       title={item.description + ' (' + item.semester + ')'}>
                     <Text>Subject Code: {item.subject_code}</Text>
                     <Text>Semester: {item.semester}</Text>
-                    <Button title="选择" value="选择" onPress={()=>{this.refs.toast.show(`你选择了id ${item.description}`);}}/>
+                    <Button title="选择" value="选择" onPress={()=>{this.onSubjectSelect(idx)}}/>
                 </Card>
             ))
         } else {
             queryResults = <Text>No Result.</Text>
         }
+        if(this.state.isLoading)
+            queryResults = <ActivityIndicator size="large" color="#0000ff" />
         return (
             <View>
                 <Toast ref="toast"/>
@@ -67,11 +84,10 @@ class SearchScreen extends Component{
                     searchIcon={{ size: 24 }}
                     placeholder='Type Here...'
                     onChangeText={(keyword)=>{this.onUserEnterKeyWords(keyword)}}
-                    onSubmitEditing={(keyword)=>{console.log("Ebter")}}/>
+                    onSubmitEditing={this.onSearchSubmit}/>
                 <ScrollView style={styles.container}>
                     {queryResults}
                 </ScrollView>
-
             </View>
 
         );
@@ -98,4 +114,4 @@ const mapStateToProps = state => ({
 })
 
 
-export default connect(mapStateToProps,{fetchUTSClass})(SearchScreen);
+export default connect(mapStateToProps,{fetchUTSClass,fetchUTSClassActivities})(SearchScreen);
