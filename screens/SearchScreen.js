@@ -53,8 +53,13 @@ class SearchScreen extends Component{
         if(this.state.subject.length > 0 && !this.state.isLoading) {
             //console.log(this.state.subject[selectedIndex]);
             const data = this.state.subject[selectedIndex];
-            this.props.navigation.navigate(
-                'ActivitySelect', {data:data}
+            this.props.navigation.push(
+
+                'ActivitySelect',
+                {
+                    data:data,
+                    title:data.description
+                }
             );
         }
     }

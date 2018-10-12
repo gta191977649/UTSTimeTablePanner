@@ -30,7 +30,6 @@ class PlannerScreen extends React.Component {
         //console.log(nextProps.subject);
     }
     render() {
-        const { navigate } = this.props.navigation;
 
         let results = [];
         let activites = [];
@@ -57,7 +56,7 @@ class PlannerScreen extends React.Component {
                 </ScrollView>
                 {
                 <ActionButton buttonColor="rgba(231,76,60,1)">
-                    <ActionButton.Item buttonColor='#9b59b6' title="新增课程" onPress={() => navigate('Search')}>
+                    <ActionButton.Item buttonColor='#9b59b6' title="新增课程" onPress={() => this.props.navigation.push('Search')}>
                         <Icon name="md-done-all" style={styles.actionButtonIcon} />
                     </ActionButton.Item>
 

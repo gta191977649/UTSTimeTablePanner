@@ -15,7 +15,8 @@ const HomeStack = createStackNavigator({
     Home: HomeScreen,
     SearchResult:SearchResultScreen,
     Search:SearchScreen,
-    ActivitySelect:ActivitySelectScreen
+    ActivitySelect:ActivitySelectScreen,
+
 });
 
 HomeStack.navigationOptions = {

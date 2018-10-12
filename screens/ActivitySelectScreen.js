@@ -5,6 +5,11 @@ import {Card, SearchBar} from "react-native-elements";
 import {needSelectClass} from "../Utils/Helper";
 
 class ActivitySelectScreen extends Component{
+    static navigationOptions = ({ navigation }) => {
+        return {
+            title: navigation.state.params.title,
+        };
+    };
     constructor(props) {
         super(props);
         this.state = {
