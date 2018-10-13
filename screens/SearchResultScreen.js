@@ -30,14 +30,11 @@ class SearchResultScreen extends Component {
 
     componentDidMount() {
         const { navigation } = this.props;
-
         const keyword = navigation.getParam('searchTerm','32992');
         this.setState({searchTerm:keyword});
         console.log(this.state.searchTerm);
         this.props.fetchUTSClass(keyword);
         this.setTitle('搜索:'+keyword);
-
-
     }
     componentWillReceiveProps(nextProps) {
         let sujectArray = [];
@@ -56,8 +53,6 @@ class SearchResultScreen extends Component {
 
     render() {
         let activites = [];
-
-
         const queryResults = this.state.subject.map((item,idx)=>(
             <Card key={idx}
                   title={item.description + ' (' + item.semester + ')'}>

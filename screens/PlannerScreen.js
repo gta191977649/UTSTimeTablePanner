@@ -22,7 +22,7 @@ class PlannerScreen extends React.Component {
     }
 
     componentWillMount() {
-        this.props.fetchUTSClass(31242);
+        //this.props.fetchUTSClass(31242);
 
     }
     componentWillReceiveProps(nextProps) {
