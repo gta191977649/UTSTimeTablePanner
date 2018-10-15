@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53f45f79-4a7a-4348-90a8-286486cbf827" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigation/MainTabNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/MainTabNavigator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Redux/Actions/PlannerAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/Redux/Actions/PlannerAction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/ActivitySelectScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/ActivitySelectScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/PlannerScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/PlannerScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/SearchScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/SearchScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/store.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -65,22 +65,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="3391" />
+          <entry key="js" value="6377" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="3391" />
+          <entry key="JavaScript" value="6377" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="11" />
+          <entry key="js" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="11" />
+          <entry key="JavaScript" value="18" />
         </counts>
       </usages-collector>
     </session>
@@ -99,21 +99,45 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/screens/SearchScreen.js">
+        <entry file="file://$PROJECT_DIR$/screens/LinksScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="55" column="38" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="38" />
+            <state relative-caret-position="220">
+              <caret line="11" column="43" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/screens/LinksScreen.js">
+        <entry file="file://$PROJECT_DIR$/Redux/Reducers/PlannertReducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="200">
+              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Redux/Reducers/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="11" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/screens/ActivitySelectScreen.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="301">
+              <caret line="72" column="47" selection-start-line="72" selection-start-column="47" selection-end-line="72" selection-end-column="47" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#1#40#0" expanded="true" />
+                <element signature="n#!!block;n#componentWillMount#0;n#ActivitySelectScreen#0" />
+                <element signature="n#!!block;n#getNextSelectClassType#0;n#ActivitySelectScreen#0" />
+                <element signature="n#!!block;n#onClassSelect#0;n#ActivitySelectScreen#0" />
               </folding>
             </state>
           </provider>
@@ -122,38 +146,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/screens/PlannerScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="58" column="124" selection-start-line="58" selection-start-column="124" selection-end-line="58" selection-end-column="124" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Redux/Reducers/PlannertReducer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Redux/Actions/Constants.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="38" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Redux/Actions/PlannerAction.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="268">
+              <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
               <folding>
-                <element signature="e#0#74#0" expanded="true" />
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/store.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -161,28 +167,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/navigation/MainTabNavigator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/screens/ActivitySelectScreen.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-306">
-              <caret line="34" column="52" lean-forward="true" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Utils/Helper.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="86" column="31" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="31" />
+            <state relative-caret-position="120">
+              <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
               <folding>
-                <element signature="n#!!block;n#weekpatternToDates#0" />
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Redux/Actions/PlannerAction.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="9" column="24" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#74#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -196,6 +196,8 @@
       <find>results</find>
       <find>fetchUTSClass</find>
       <find>dow</find>
+      <find>getSubjects</find>
+      <find>selectableClassType</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -207,17 +209,17 @@
         <option value="$PROJECT_DIR$/screens/HomeScreen.js" />
         <option value="$PROJECT_DIR$/screens/Home/Agenda.js" />
         <option value="$PROJECT_DIR$/Redux/Reducers/index.js" />
-        <option value="$PROJECT_DIR$/store.js" />
         <option value="$PROJECT_DIR$/Redux/Actions/Constants.js" />
         <option value="$PROJECT_DIR$/App.js" />
         <option value="$PROJECT_DIR$/Redux/Reducers/PlannertReducer.js" />
         <option value="$PROJECT_DIR$/screens/Home/HomeScreen.js" />
         <option value="$PROJECT_DIR$/screens/SearchResultScreen.js" />
-        <option value="$PROJECT_DIR$/Redux/Actions/PlannerAction.js" />
         <option value="$PROJECT_DIR$/Utils/Helper.js" />
-        <option value="$PROJECT_DIR$/screens/ActivitySelectScreen.js" />
-        <option value="$PROJECT_DIR$/screens/SearchScreen.js" />
         <option value="$PROJECT_DIR$/navigation/MainTabNavigator.js" />
+        <option value="$PROJECT_DIR$/store.js" />
+        <option value="$PROJECT_DIR$/screens/SearchScreen.js" />
+        <option value="$PROJECT_DIR$/Redux/Actions/PlannerAction.js" />
+        <option value="$PROJECT_DIR$/screens/ActivitySelectScreen.js" />
         <option value="$PROJECT_DIR$/screens/PlannerScreen.js" />
       </list>
     </option>
@@ -283,6 +285,12 @@
             <path>
               <item name="UTSTimeTablePanner" type="b2602c69:ProjectViewProjectNode" />
               <item name="UTSTimeTablePanner" type="462c0819:PsiDirectoryNode" />
+              <item name="Redux" type="462c0819:PsiDirectoryNode" />
+              <item name="Reducers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UTSTimeTablePanner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UTSTimeTablePanner" type="462c0819:PsiDirectoryNode" />
               <item name="screens" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -339,13 +347,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57529000" />
+    <option name="totallyTimeSpent" value="71701000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13593256" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19534555" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
@@ -359,8 +367,8 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32917964" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" weight="0.32831" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2751817" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4992948" visible="true" weight="0.305187" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50070524" side_tool="true" weight="0.64053077" />
       <window_info anchor="bottom" id="RNConsole" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -375,9 +383,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/__tests__/App-test.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/package-lock.json">
@@ -414,13 +419,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Redux/Reducers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@expo/samples/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -430,32 +428,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/screens/SearchResultScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-702">
-          <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-end-line="4" />
+        <state relative-caret-position="900">
+          <caret line="50" column="5" selection-start-line="38" selection-start-column="4" selection-end-line="50" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/screens/SettingsScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
+        <state relative-caret-position="260">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Redux/Reducers/PlannertReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screens/LinksScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -464,25 +445,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Redux/Actions/Constants.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
+        <state relative-caret-position="40">
           <caret line="2" column="38" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Redux/Actions/PlannerAction.js">
+    <entry file="file://$PROJECT_DIR$/navigation/MainTabNavigator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="120">
+          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
           <folding>
-            <element signature="e#0#74#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Utils/Helper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="86" column="31" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="31" />
+        <state relative-caret-position="60">
+          <caret line="86" column="16" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="16" />
           <folding>
             <element signature="n#!!block;n#weekpatternToDates#0" />
           </folding>
@@ -491,8 +472,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/screens/SearchScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="55" column="38" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="38" />
+        <state relative-caret-position="377">
+          <caret line="61" column="17" lean-forward="true" selection-start-line="55" selection-start-column="12" selection-end-line="61" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Redux/Reducers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/screens/LinksScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="43" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -505,24 +506,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/navigation/MainTabNavigator.js">
+    <entry file="file://$PROJECT_DIR$/store.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="90">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Redux/Reducers/PlannertReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Redux/Actions/PlannerAction.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#74#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/screens/ActivitySelectScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-306">
-          <caret line="34" column="52" lean-forward="true" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
+        <state relative-caret-position="301">
+          <caret line="72" column="47" selection-start-line="72" selection-start-column="47" selection-end-line="72" selection-end-column="47" />
+          <folding>
+            <element signature="e#1#40#0" expanded="true" />
+            <element signature="n#!!block;n#componentWillMount#0;n#ActivitySelectScreen#0" />
+            <element signature="n#!!block;n#getNextSelectClassType#0;n#ActivitySelectScreen#0" />
+            <element signature="n#!!block;n#onClassSelect#0;n#ActivitySelectScreen#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/screens/PlannerScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="58" column="124" selection-start-line="58" selection-start-column="124" selection-end-line="58" selection-end-column="124" />
+        <state relative-caret-position="268">
+          <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -28,7 +28,7 @@ class SearchScreen extends Component{
     }
 
     onUserEnterKeyWords(keyword) {
-        console.log(keyword.length);
+        //console.log(keyword.length);
         this.setState({keyword:keyword});
     }
 

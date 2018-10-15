@@ -4,7 +4,7 @@ import { SearchBar } from 'react-native-elements';
 import { Card,Divider } from 'react-native-elements'
 
 import { connect } from 'react-redux';
-import {fetchUTSClass} from '../Redux/Actions/PlannerAction';
+import {fetchUTSClass, getSubjects} from '../Redux/Actions/PlannerAction';
 import ActionButton from 'react-native-action-button';
 import Icon from 'react-native-vector-icons/Ionicons';
 
@@ -17,17 +17,35 @@ class PlannerScreen extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: {}
+            subjects: []
         };
     }
-
-    componentWillMount() {
+    loadFile() {
+        let storedSubject = this.props.getSubjects();
+        //console.log("Stored subjects:",storedSubject);
+        this.setState({subjects:storedSubject});
+    }
+    componentDidMount() {
         //this.props.fetchUTSClass(31242);
+        //读取本地课程数据
+        //this.loadFile();
 
     }
     componentWillReceiveProps(nextProps) {
-        this.setState({data:nextProps.subject});
+
         //console.log(nextProps.subject);
+    }
+    renderSubjectList() {
+        this.loadFile();
+        return(
+            this.state.subjects.map((item,idx)=>(
+                <Card key={idx}
+                      title={item.description + ' (' + item.semester + ')'}>
+                    <Text>Subject Code: {item.subject_code}</Text>
+                    <Text>Semester: {item.semester}</Text>
+                </Card>
+            ))
+        )
     }
     render() {
 
@@ -52,7 +70,7 @@ class PlannerScreen extends React.Component {
             <View style={styles.container}>
 
                 <ScrollView style={styles.container}>
-
+                    {this.renderSubjectList()}
                 </ScrollView>
                 {
                 <ActionButton buttonColor="rgba(231,76,60,1)">
@@ -87,4 +105,4 @@ const mapStateToProps = state => ({
     errorMsg: state.Planner.errorMsg
 })
 
-export default connect(mapStateToProps,{fetchUTSClass})(PlannerScreen);
+export default connect(mapStateToProps,{fetchUTSClass,getSubjects})(PlannerScreen);
