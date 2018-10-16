@@ -33,7 +33,7 @@ class SearchScreen extends Component{
     }
 
     componentWillReceiveProps(nextProps) {
-
+        console.log(nextProps)
         let sujectArray = [];
         Object.keys(nextProps.subject).forEach((key, idx) => {
             if(key !== null) {
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = state => ({
-    subject: state.Planner.subject,
+    subject: state.Planner.restResponse,
     error: state.Planner.error,
     errorMsg: state.Planner.errorMsg
 })

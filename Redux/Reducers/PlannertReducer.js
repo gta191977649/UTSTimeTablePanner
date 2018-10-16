@@ -1,4 +1,4 @@
-import {FETCH_UTS_TIMETABLE,FETCH_UTS_TIMETABLE_ERROR} from '../Actions/Constants';
+import * as TYPE from '../Actions/Constants';
 
 const initialState = {
     classData: {},
@@ -7,10 +7,27 @@ const initialState = {
 }
 export default function (state = initialState,action) {
     switch (action.type) {
-        case FETCH_UTS_TIMETABLE:
+        case TYPE.FETCH_UTS_TIMETABLE_ERROR:
             return{
                 ...state,
-                subject: action.payload
+                operationStatus: action.payload
+            }
+
+        case TYPE.SAVE_LOCAL_TIMETABLE_OK:
+            return{
+                ...state,
+                operationStatus: "OK"
+            }
+        case TYPE.GET_LOCAL_TIMETABLE_OK:
+            return{
+                ...state,
+                localSubjects: action.payload
+            }
+        case TYPE.FETCH_UTS_TIMETABLE:
+
+            return{
+                ...state,
+                restResponse: action.payload
             }
         default:return state;
     }

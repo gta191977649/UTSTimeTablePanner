@@ -20,23 +20,19 @@ class PlannerScreen extends React.Component {
             subjects: []
         };
     }
-    loadFile() {
-        let storedSubject = this.props.getSubjects();
-        //console.log("Stored subjects:",storedSubject);
-        this.setState({subjects:storedSubject});
-    }
     componentDidMount() {
         //this.props.fetchUTSClass(31242);
         //读取本地课程数据
         //this.loadFile();
+        this.props.getSubjects();
 
     }
     componentWillReceiveProps(nextProps) {
-
+        this.setState({subjects:nextProps.subjects});
         //console.log(nextProps.subject);
     }
     renderSubjectList() {
-        this.loadFile();
+       
         return(
             this.state.subjects.map((item,idx)=>(
                 <Card key={idx}
@@ -100,9 +96,7 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = state => ({
-    subject: state.Planner.subject,
-    error: state.Planner.error,
-    errorMsg: state.Planner.errorMsg
+    subjects: state.Planner.localSubjects,
 })
 
-export default connect(mapStateToProps,{fetchUTSClass,getSubjects})(PlannerScreen);
+export default connect(mapStateToProps,{getSubjects})(PlannerScreen);
